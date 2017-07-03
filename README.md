@@ -17,6 +17,10 @@ for example :- post.model.ts
 
 import {BaseModel} from "../services/query-builder";
 
+---
+create model first
+---
+
 ```
 export class PostModel extends BaseModel {
     public database: string = 'exampleDatabase.db';
@@ -35,6 +39,27 @@ export class PostModel extends BaseModel {
     }
 }
 ```
+
+```
+var posts = new QueryBuilder(new PostModel());
+
+var category_id = 5;
+
+posts.where("id", "=", category_id).orderBy("created_at", "DESC").limit(data.limit, data.start).get();
+```
+
+---
+Query Builder methods
+---
+
+1) get()
+2) delete()
+3) create()
+4) first()
+5) where()
+6) orWhere()
+7) update()
+8) updateOrcreate()
 
 Sorry, npm installation not working right now, somehow. however you can Download query-builder.ts manually and put into service folder, make sure to install dependency from https://github.com/mirkonasato/ionix-sqlite.
 
