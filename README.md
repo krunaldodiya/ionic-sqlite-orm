@@ -44,8 +44,10 @@ export class PostModel extends BaseModel {
 var posts = new QueryBuilder(new PostModel());
 
 var category_id = 5;
+var limit = 50;
+var start = 0;
 
-posts.where("id", "=", category_id).orderBy("created_at", "DESC").limit(data.limit, data.start).get();
+var results = posts.where("id", "=", category_id).orderBy("created_at", "DESC").limit(limit, start).get();
 ```
 
 ---
