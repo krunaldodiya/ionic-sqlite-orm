@@ -17,7 +17,7 @@ for example :- post.model.ts
 
 import {BaseModel} from "../services/query-builder";
 
--
+```
 export class PostModel extends BaseModel {
     public database: string = 'exampleDatabase.db';
     public table: string = 'posts';
@@ -34,9 +34,9 @@ export class PostModel extends BaseModel {
         status: 'INTEGER(1)'
     }
 }
--
+```
 
-Sorry, npm installation not working right now, somehow. however you can Download query-builder.ts manually and put into service folder, make sure to install dependency https://github.com/mirkonasato/ionix-sqlite.
+Sorry, npm installation not working right now, somehow. however you can Download query-builder.ts manually and put into service folder, make sure to install dependency from https://github.com/mirkonasato/ionix-sqlite.
 
-
+npm install --save ionix-sqlite
 
